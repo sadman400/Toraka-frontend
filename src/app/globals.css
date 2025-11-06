@@ -1,0 +1,200 @@
+/* Font Import - Must be first */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+/* Cursor Pointer */
+
+button {
+  cursor: pointer;
+}
+
+:root {
+  /* Dark theme colors */
+  --background: #0A0F1C;
+  --foreground: #DDE1F0;
+  --card: #0D1426;
+  --card-foreground: #DDE1F0;
+  --popover: #171F34;
+  --popover-foreground: #DDE1F0;
+  --primary: #1665F4;
+  --primary-foreground: #FFFFFF;
+  --secondary: #1A2436;
+  --secondary-foreground: #DDE1F0;
+  --muted: #1A2436;
+  --muted-foreground: #A9B2C8;
+  --accent: #1A2436;
+  --accent-foreground: #DDE1F0;
+  --destructive: #D53030;
+  --destructive-foreground: #FFFFFF;
+  --border: #334155;
+  --input: #1A2436;
+  --ring: #1665F4;
+  --radius: 0.5rem;
+}
+
+/* * {
+  border-color: hsl(var(--border));
+} */
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro', system-ui, sans-serif;
+  font-feature-settings: "rlig" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+/* Focus styles */
+.focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Animation utilities */
+.animate-in {
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+}
+
+.animate-out {
+  animation-duration: 0.15s;
+  animation-fill-mode: both;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(225deg, #04C9FE 5%, #0A93E5 34%, #1066CF 64%, #1445C0 89%, #1731B7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Scrollbar hide utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hero Slider - Full Width with Custom Center Zoom */
+.hero-slider {
+  overflow: visible !important;
+  position: relative;
+  padding-left: 12px !important; /* Add left spacing for first image */
+}
+
+.hero-slider .swiper {
+  overflow: visible !important;
+  padding: 20px 0; /* Add padding for zoom effect */
+}
+
+.hero-slider .swiper-wrapper {
+  align-items: center;
+  padding-left: 0 !important;
+}
+
+/* Ensure proper spacing for first slide */
+.hero-slider .swiper-slide:first-child {
+  margin-left: 0 !important;
+}
+
+.hero-slider .swiper-wrapper {
+  align-items: center;
+}
+
+.hero-slider .swiper-slide {
+  transition: transform 0.3s ease, opacity 0.3s ease, z-index 0.3s ease;
+  transform: scale(1) !important; /* Keep original size */
+  opacity: 1 !important; /* Keep full opacity */
+  z-index: 1;
+  position: relative;
+}
+
+/* Override Swiper's built-in slide classes - keep original size and opacity */
+.hero-slider .swiper-slide-active,
+.hero-slider .swiper-slide-next,
+.hero-slider .swiper-slide-prev {
+  transform: scale(1) !important; /* No scaling - keep original size */
+  opacity: 1 !important; /* Keep full opacity */
+  z-index: 1 !important;
+}
+
+
+
+/* JavaScript-detected center slide - ONLY this scales up */
+.hero-slider .swiper-slide.center-slide {
+  transform: scale(1.15) !important;
+  opacity: 1 !important;
+  z-index: 10 !important;
+}
+
+/* Splide center slide scaling utility */
+.scale-115 {
+  transform: scale(1.15) !important;
+}
+
+/* Fix ARIA role compatibility issues */
+/* Note: Splide automatically adds ARIA roles. We'll handle this in JavaScript */
+
+/* Line clamp utility for better text truncation */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Search Modal Animation */
+@keyframes searchModalIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes searchModalOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+}

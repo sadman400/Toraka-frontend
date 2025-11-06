@@ -1,0 +1,72 @@
+/* Content Swiper Custom Styles */
+
+/* Trending Swiper */
+.trending-swiper {
+  padding: 0;
+  overflow: visible;
+}
+
+.trending-swiper .swiper-slide {
+  height: auto;
+}
+
+.trending-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+/* Highest Rated Swiper */
+.highest-rated-swiper {
+  padding: 0;
+  overflow: visible;
+}
+
+.highest-rated-swiper .swiper-slide {
+  height: auto;
+}
+
+.highest-rated-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+/* Most Popular Swiper */
+.most-popular-swiper {
+  padding: 0;
+  overflow: visible;
+}
+
+.most-popular-swiper .swiper-slide {
+  height: auto;
+}
+
+.most-popular-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+/* Remove default Swiper pagination and navigation for content sliders */
+.trending-swiper .swiper-pagination,
+.highest-rated-swiper .swiper-pagination,
+.most-popular-swiper .swiper-pagination {
+  display: none !important;
+}
+
+.trending-swiper .swiper-button-next,
+.trending-swiper .swiper-button-prev,
+.highest-rated-swiper .swiper-button-next,
+.highest-rated-swiper .swiper-button-prev,
+.most-popular-swiper .swiper-button-next,
+.most-popular-swiper .swiper-button-prev {
+  display: none !important;
+}
+
+/* Smooth transitions for hover effects */
+.trending-swiper .swiper-slide .group,
+.highest-rated-swiper .swiper-slide .group,
+.most-popular-swiper .swiper-slide .group {
+  transition: transform 0.3s ease;
+}
+
+.trending-swiper .swiper-slide:hover .group,
+.highest-rated-swiper .swiper-slide:hover .group,
+.most-popular-swiper .swiper-slide:hover .group {
+  transform: translateY(-2px);
+}

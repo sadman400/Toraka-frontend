@@ -1,0 +1,397 @@
+/* Hero Splide Custom Styles */
+
+/* Main Hero Splide */
+.hero-splide {
+  overflow: visible;
+}
+
+.hero-splide .splide__track {
+  overflow: visible;
+}
+
+.hero-splide .splide__list {
+  align-items: center;
+  padding-left: 0 !important;
+}
+
+/* Responsive margins for prev/next slides to match original gap spacing */
+
+.hero-splide .splide__slide.is-prev {
+  margin-right: 56px !important;
+}
+
+.hero-splide .splide__slide.is-next {
+  margin-left: 32px !important;
+}
+
+/* Responsive breakpoints matching Splide gap values */
+/* @media (min-width: 440px) {
+  .hero-slider .hero-splide .is-prev {
+    margin-right: 36px !important;
+  }
+  .hero-slider .hero-splide .is-next {
+    margin-left: 18px !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .hero-slider .hero-splide .is-prev {
+    margin-right: 40px !important;
+  }
+  .hero-slider .hero-splide .is-next {
+    margin-left: 20px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-slider .hero-splide .is-prev {
+    margin-right: 44px !important;
+  }
+  .hero-slider .hero-splide .is-next {
+    margin-left: 22px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-slider .hero-splide .is-prev {
+    margin-right: 48px !important;
+  }
+  .hero-slider .hero-splide .is-next {
+    margin-left: 24px !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-slider .hero-splide .is-prev {
+    margin-right: 52px !important;
+  }
+  .hero-slider .hero-splide .is-next {
+    margin-left: 26px !important;
+  }
+}
+
+@media (min-width: 1536px) {
+  .hero-slider .hero-splide .is-prev {
+    margin-right: 56px !important;
+  }
+  .hero-slider .hero-splide .is-next {
+    margin-left: 28px !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .hero-slider .hero-splide .is-prev {
+    margin-right: 60px !important;
+  }
+  .hero-slider .hero-splide .is-next {
+    margin-left: 30px !important;
+  }
+}
+
+@media (min-width: 2560px) {
+  .hero-slider .hero-splide .is-prev {
+    margin-right: 64px !important;
+  }
+  .hero-slider .hero-splide .is-next {
+    margin-left: 32px !important;
+  }
+}
+
+@media (min-width: 3440px) {
+  .hero-slider .hero-splide.is-prev {
+    margin-right: 68px !important;
+  }
+  .hero-slider .hero-splide .is-next {
+    margin-left: 34px !important;
+  }
+}
+
+@media (min-width: 4096px) {
+  .hero-slider .hero-splide .is-prev {
+    margin-right: 72px !important;
+  }
+  .hero-slider .hero-splide .is-next {
+    margin-left: 36px !important;
+  }
+} */
+
+.hero-splide .splide__slide {
+  transition: transform 0.1s ease, opacity 0.05s ease, z-index 0.05s ease;
+  transform: scale(1) !important;
+  opacity: 1 !important;
+  z-index: 1;
+  position: relative;
+  height: auto;
+  flex-shrink: 0; /* Prevent slides from shrinking */
+  width: auto !important; /* Allow responsive width */
+}
+
+/* Center slide scaling effect - only for truly centered slides */
+.hero-splide .splide__slide.is-active .hero-slide {
+  transform: scale(1.3069, 1.35483871) !important;
+  z-index: 10 !important;
+}
+
+/* Background Hero Splide */
+.hero-background-splide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-background-splide .splide__track {
+  height: 100%;
+}
+
+.hero-background-splide .splide__list {
+  height: 100%;
+}
+
+.hero-background-splide .splide__slide {
+  height: 100%;
+  position: relative;
+}
+
+/* Remove default Splide pagination and arrows */
+.hero-splide .splide__pagination,
+.hero-background-splide .splide__pagination {
+  display: none !important;
+}
+
+.hero-splide .splide__arrows,
+.hero-background-splide .splide__arrows {
+  display: none !important;
+}
+
+.hero-splide .splide__arrow,
+.hero-background-splide .splide__arrow {
+  display: none !important;
+}
+
+/* Custom drag cursor */
+.hero-splide.is-dragging {
+  cursor: grabbing;
+}
+
+.hero-splide:not(.is-dragging) {
+  cursor: grab;
+}
+
+/* Disable text selection during drag */
+.hero-splide.is-dragging * {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Ensure proper spacing for first slide */
+.hero-splide .splide__slide:first-child {
+  margin-left: 0 !important;
+}
+
+/* Background fade effect for thumbnails */
+.hero-background-fade {
+  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-background-fade.active {
+  opacity: 1;
+}
+
+.hero-background-fade.inactive {
+  opacity: 0;
+}
+
+/* Focus center effect - ensure center slide is properly highlighted */
+.hero-splide .splide__slide.is-active {
+  z-index: 5;
+}
+
+/* Smooth transitions for all slides */
+.hero-splide .splide__slide > div {
+  transition: transform 0.1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Enhanced center slide effect - only for active center slides */
+.hero-splide .splide__slide.is-active .hero-slide {
+  transform: scale(1.30693069, 1.0) !important;
+  z-index: 10;
+  height: 378px !important;
+  max-height: 378px !important;
+  min-height: 378px !important;
+}
+
+.hero-splide .splide__slide.is-active .hero-slide img {
+  filter: brightness(1.25);
+  /* height: 440px !important;
+  max-height: 440px !important;
+  min-height: 440px !important;
+  object-fit: cover;
+  width: auto !important; */
+}
+
+/* Force 440px final height for active slides - highest specificity */
+/* .hero-slider .hero-splide .splide__slide.is-active .hero-slide {
+  height: 440px !important;
+  max-height: 440px !important;
+  min-height: 440px !important;
+}
+
+.hero-slider .hero-splide .splide__slide.is-active .hero-slide img {
+  height: 440px !important;
+  max-height: 440px !important;
+  min-height: 440px !important;
+  object-fit: cover;
+  width: auto !important;
+} */
+
+.hero-splide .splide__slide .hero-slide img {
+  filter: brightness(0.7);
+}
+
+/* Show content only on active slides */
+.hero-splide .splide__slide .slide-content {
+  display: none;
+}
+
+.hero-splide .splide__slide.is-active .slide-content {
+  display: block;
+}
+
+/* Bottom gradient overlay for active slides */
+.hero-splide .splide__slide.is-active .hero-slide::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10rem; /* h-32 = 128px = 8rem */
+  background: linear-gradient(to bottom, rgba(10, 15, 28, 0) 0%, #0a0f1c 100%);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Responsive slide dimensions - maintain proper scaling across all screen sizes */
+.hero-splide .splide__slide .responsive-slide {
+  /* Base mobile size (up to 440px) */
+  width: 202px !important;
+    height: 289px !important;
+    min-width: 202px !important;
+    min-height: 289px !important;
+    max-width: 202px !important;
+    max-height: 289px !important;
+}
+
+/* Small mobile (440px+) */
+@media (min-width: 378px) {
+  .hero-splide .splide__slide .responsive-slide {
+    width: 202px !important;
+    height: 289px !important;
+    min-width: 202px !important;
+    min-height: 289px !important;
+    max-width: 202px !important;
+    max-height: 289px !important;
+  }
+}
+
+/* Medium mobile/tablet (640px+) */
+@media (min-width: 640px) {
+  .hero-splide .splide__slide .responsive-slide {
+   width: 202px !important;
+    height: 289px !important;
+    min-width: 202px !important;
+    min-height: 289px !important;
+    max-width: 202px !important;
+    max-height: 289px !important;
+  }
+}
+
+/* Tablet (768px+) */
+@media (min-width: 768px) {
+  .hero-splide .splide__slide .responsive-slide {
+    width: 202px !important;
+    height: 289px !important;
+    min-width: 202px !important;
+    min-height: 289px !important;
+    max-width: 202px !important;
+    max-height: 289px !important;
+  }
+}
+
+/* Small desktop (1024px+) */
+@media (min-width: 1024px) {
+  .hero-splide .splide__slide .responsive-slide {
+    width: 202px !important;
+    height: 289px !important;
+    min-width: 202px !important;
+    min-height: 289px !important;
+    max-width: 202px !important;
+    max-height: 289px !important;
+  }
+}
+
+/* Medium desktop (1280px+) */
+/* @media (min-width: 1280px) {
+  .hero-splide .splide__slide .responsive-slide {
+    width: 280px !important;
+    height: 373px !important;
+    min-width: 280px !important;
+    min-height: 373px !important;
+    max-width: 280px !important;
+    max-height: 373px !important;
+  }
+} */
+
+/* Large desktop (1536px+) */
+/* @media (min-width: 1536px) {
+  .hero-splide .splide__slide .responsive-slide {
+    width: 300px !important;
+    height: 400px !important;
+    min-width: 300px !important;
+    min-height: 400px !important;
+    max-width: 300px !important;
+    max-height: 400px !important;
+  }
+} */
+
+/* Extra large desktop (1920px+) */
+/* @media (min-width: 1920px) {
+  .hero-splide .splide__slide .responsive-slide {
+    width: 320px !important;
+    height: 427px !important;
+    min-width: 320px !important;
+    min-height: 427px !important;
+    max-width: 320px !important;
+    max-height: 427px !important;
+  }
+} */
+
+/* Ultra-wide screen constraints */
+@media (min-width: 2560px) {
+  .hero-slider {
+    max-width: 2400px;
+    margin: 0 auto;
+  }
+
+  .hero-splide .splide__slide {
+    max-width: 364px;
+    flex: 0 0 auto;
+  }
+
+  .hero-splide .splide__track {
+    padding: 0 2rem;
+  }
+}
+
+/* Extra ultra-wide screen constraints */
+@media (min-width: 3440px) {
+  .hero-slider {
+    max-width: 2800px;
+  }
+
+  .hero-splide .splide__track {
+    padding: 0 4rem;
+  }
+}

@@ -1,0 +1,115 @@
+.featured-splide .splide__list .splide__slide {
+    max-width: 190px;
+    min-width: 190px;
+}
+.top-series-splide .splide__list .splide__slide {
+    max-width: 348px;
+    min-width: 348px;
+    margin-right: 8px !important;
+} 
+
+@media (min-width: 1024px) {
+  .top-series-splide .splide__list .splide__slide {
+    max-width: 408px;
+    min-width: 408px;
+  }
+}
+
+/* Content Splide Custom Styles
+
+/* Common Splide Styles */
+.trending-splide,
+.highest-rated-splide,
+.most-popular-splide,
+.top-series-splide {
+  padding: 0;
+  overflow: visible;
+}
+
+.trending-splide .splide__track,
+.highest-rated-splide .splide__track,
+.most-popular-splide .splide__track,
+.top-series-splide .splide__track {
+  overflow: visible;
+}
+
+.trending-splide .splide__list,
+.highest-rated-splide .splide__list,
+.most-popular-splide .splide__list,
+.top-series-splide .splide__list {
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+}
+
+.trending-splide .splide__slide,
+.highest-rated-splide .splide__slide,
+.most-popular-splide .splide__slide,
+.top-series-splide .splide__slide {
+  height: auto;
+  opacity: 1;
+  transform: none;
+}
+
+/* Remove default Splide pagination and arrows for all content sliders */
+.trending-splide .splide__pagination,
+.highest-rated-splide .splide__pagination,
+.most-popular-splide .splide__pagination,
+.top-series-splide .splide__pagination {
+  display: none !important;
+}
+
+.trending-splide .splide__arrows,
+.highest-rated-splide .splide__arrows,
+.most-popular-splide .splide__arrows,
+.top-series-splide .splide__arrows {
+  display: none !important;
+}
+
+.trending-splide .splide__arrow,
+.highest-rated-splide .splide__arrow,
+.most-popular-splide .splide__arrow,
+.top-series-splide .splide__arrow {
+  display: none !important;
+}
+
+/* Smooth transitions for hover effects */
+.trending-splide .splide__slide .group,
+.highest-rated-splide .splide__slide .group,
+.most-popular-splide .splide__slide .group,
+.top-series-splide .splide__slide .group {
+  transition: transform 0.3s ease;
+}
+
+.trending-splide .splide__slide:hover .group,
+.highest-rated-splide .splide__slide:hover .group,
+.most-popular-splide .splide__slide:hover .group,
+.top-series-splide .splide__slide:hover .group {
+  transform: translateY(-2px);
+}
+
+/* Custom drag cursor */
+.trending-splide.is-dragging,
+.highest-rated-splide.is-dragging,
+.most-popular-splide.is-dragging,
+.top-series-splide.is-dragging {
+  cursor: grabbing;
+}
+
+.trending-splide:not(.is-dragging),
+.highest-rated-splide:not(.is-dragging),
+.most-popular-splide:not(.is-dragging),
+.top-series-splide:not(.is-dragging) {
+  cursor: grab;
+}
+
+/* Disable text selection during drag */
+.trending-splide.is-dragging *,
+.highest-rated-splide.is-dragging *,
+.most-popular-splide.is-dragging *,
+.top-series-splide.is-dragging * {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
