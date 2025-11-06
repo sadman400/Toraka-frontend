@@ -26,7 +26,6 @@ const footerLinks = {
 
 const socialLinks = [
   { name: "Discord", href: "#", icon: "/assets/icons/discord-icon.svg" },
-  { name: "TikTok", href: "#", icon: "/assets/icons/tiktok-icon.svg" },
   { name: "LinkedIn", href: "#", icon: "/assets/icons/linkedin-icon.svg" },
   { name: "Instagram", href: "#", icon: "/assets/icons/instagram-icon.svg" },
   { name: "Reddit", href: "#", icon: "/assets/icons/reddit-icon.svg" },
